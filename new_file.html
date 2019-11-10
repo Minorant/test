@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- 注意，由于使用AJAX方法，本文件需要置于服务端(如Wampserver)中运行，本地无法运行 -->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>3-3</title>
+		<script type="text/javascript">
+			window.onload = change;
+
+			function change() {
+				var btn = document.getElementById("btn");
+				btn.addEventListener("click", fun1);
+
+				function fun1() {
+					document.getElementById("114").innerHTML = "";
+					var xmlHttp;
+
+					if (window.XMLHttpRequest) {
+						xmlHttp = new XMLHttpRequest();
+
+					} else {
+						xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+					}
+					xmlHttp.open("GET", "test.json", true); // 规定请求类型get发送 请求服务器下的test.txt文件 异步处理
+					xmlHttp.send(); //将上面所规定的请求发送至服务器
+
+					xmlHttp.onreadystatechange = function() {
+						if (xmlHttp.readyState == 4 && xmlHttp.status == 200) {
+							document.getElementById("114").innerHTML = "<br>" + "啊♂一个东西被传了过来？！";
+							var txt = xmlHttp.responseText;
+							var obj = eval("("+txt+")");//利用eval对JSON进行解析
+							obj.showStudent(0);
+						} else {
+
+							// document.getElementById("114").innerHTML += "<br>现在的状态玛为" + xmlHttp.readyState;
+						}
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn">点我啊</button>
+		<p id="114">上面是一个神奇的按钮！！</p>
+	</body>
+</html>

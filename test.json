@@ -1,0 +1,7 @@
+﻿{
+			"students" : [
+			{ "name":"Joe" , "age":19 },
+			{ "name":"Mark" , "age":21 }
+			], 
+			"showStudent": function (i) {alert("第一个学生名字："+obj.students[i].name+ "，年龄："+obj.students[i].age);}
+		}
