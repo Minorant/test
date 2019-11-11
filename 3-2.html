@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>你好世界</title>
+		<style>
+			#btn:hover {
+				background: aqua;
+			}
+
+			#btn:active {
+				background: blue;
+				color: white;
+			}
+
+			#pid {
+				color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="test1">
+			<!-- 句柄 -->
+			<p>这是一个测试的HTML文件</p>
+			<button id="btn">这是一个神奇的按钮</button>
+			<p id="pid">ss<br></p>
+			<script>
+				var btn = document.getElementById("btn");
+				btn.addEventListener("mouseenter", fun1);
+				btn.addEventListener("click", fun2);
+				btn.addEventListener("mouseleave", fun3);
+
+				function fun1() {
+					document.getElementById("pid").innerHTML += "你进入了按钮<br>";
+				}
+
+				function fun2() {
+					document.getElementById("pid").innerHTML += "你点击了按钮<br>";
+				}
+
+				function fun3() {
+					document.getElementById("pid").innerHTML += "你离开了按钮<br>";
+				}
+			</script>
+		</div>
+
+	</body>
+
+
+</html>
