@@ -1,0 +1,27 @@
+.jumbotron{
+	background-color: #0288d1;
+}
+.navSearch>form>input{
+	width: 300px!important;
+}
+.navSearch>form>button{
+	margin-left: 5px;
+}
+.erwm{
+	 width: 100px;
+	 height: 100px;
+}
+.nav-item{
+	padding-right: 20px;
+}
+.fa-github{
+	color: #56B6C2;
+}
+.orginalInput{
+	resize: none;
+}
+.Numberation{
+	resize: none;
+	width: 50px;
+	height: 40px!important;
+}

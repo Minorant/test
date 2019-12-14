@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap 实例</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="style.css"/>
+	</head>
+	<body>
+		<div class="jumbotron text-left text-light" style="margin-bottom:0">
+			<h1>有空改成动画</h1>
+		</div>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin-bottom: 20px;">
+			<a class="navbar-brand" href="test5.html">主页</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav navSetting">
+					<li class="nav-item">
+						<a class="nav-link" href="#" style="color: white;">进制装换</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">链接</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">链接</a>
+					</li>
+				</ul>
+				<div class="navSearch ml-auto">
+					<form class="form-inline">
+						<input class="form-control" type="text" placeholder="你想搜一点什么？虽然什么都没有orz">
+						<button class="btn btn-success" type="submit"><i class="fa fa-search" style="font-size:20px;"></i><strong>搜索</strong></button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class="container" style="margin: auto;">
+			<div class="row">
+				<h2><i>在线进制转换器</i></h2><br />
+				
+			</div>
+			<p>当前支持2~10进制位之间的互换</p>
+			<div class="row" >
+				
+					<div class="col-sm-8 px-5">		
+						<label title="输入要转换的原进制数字">原数字</label>&emsp;<textarea class="form-control orginalInput" id="Input" rows="3" placeholder="请输入原数字..."></textarea>										
+					</div>
+					
+					<div class="col-sm-2">
+						<label title="原进制数"><br>原进制数:</label>										
+						<textarea class="form-control Numberation" id="OrginalNumberation" maxlength="2"></textarea>
+					</div>
+					<div class="col-sm-2">
+						<label title="目标进制数"><br>目标进制:</label>										
+						<textarea class="form-control Numberation" id="ObjectNumberation" maxlength="2"></textarea>
+					</div>
+			</div>	
+			<br><br />
+			<div class="row">
+				<div class="col-sm-8 px-5">
+					<label>输出结果</label><textarea class="form-control orginalInput" placeholder="输出结果" id="Output"></textarea>
+				</div>
+			</div>
+			<br /><br />
+			<div class="row">
+				<div class="col-sm-4 px-5">
+					<button type="button" class="btn btn-primary" style="margin-left: 10px;" id="start">转换</button>
+					<button type="button" class="btn btn-primary" style="margin-left: 10px;">复制</button>
+					<button type="button" class="btn btn-primary" style="margin-left: 10px;" id="reset">重置</button>
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer bg-light" style="margin-bottom: 0;">
+			<hr>
+			<div class="text-center">
+				<a href="https://github.com/Minorant/test" target="_blank">
+					<i class="fa fa-github" style="font-size:20px;"></i>
+				</a>
+				<p class="text-center" style="margin: 0;">Copyright © 2019 Minorant shangjinsb.top All Rights Reserved. </p>
+				<br>
+			</div>
+		</footer>
+	<script>
+		var a = 1;
+		$(document).ready(function(){
+			$("#start").click(function(){
+				a = $("#Input").val();
+				$("#Output").val("这个功能我还没写好")
+			});
+			$("#reset").click(function(){
+				$("#Input").val("");
+				$("#OrginalNumberation").val("");
+				$("#ObjectNumberation").val("");
+				$("#Output").val("")
+			});
+		});
+	</script>
+	</body>
+</html>
