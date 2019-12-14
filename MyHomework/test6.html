@@ -12,8 +12,8 @@
 		<link rel="stylesheet" href="style.css"/>
 	</head>
 	<body>
-		<div class="jumbotron text-left text-light" style="margin-bottom:0">
-			<h1>有空改成动画</h1>
+		<div class="jumbotron jumbotron-fluid text-left text-light" style="margin-bottom:0">
+			<h1 style="margin-left: 30px;">SOS団</h1>
 		</div>
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin-bottom: 20px;">
 			<a class="navbar-brand" href="test5.html">主页</a>
@@ -22,14 +22,21 @@
 			</button>
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav navSetting">
-					<li class="nav-item">
-						<a class="nav-link" href="#" style="color: white;">进制装换</a>
+					 <li class="nav-item dropdown">
+					      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+					        数学工具
+					      </a>
+					      <div class="dropdown-menu">
+					        <a class="dropdown-item" href="#">进制转换</a>
+					      </div>
 					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">链接</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link" href="#">链接</a>
+					<li class="nav-item dropdown">
+					      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+					        校园工具
+					      </a>
+					      <div class="dropdown-menu">
+					        <a class="dropdown-item" href="#">体测计算器</a>
+					      </div>
 					</li>
 				</ul>
 				<div class="navSearch ml-auto">
@@ -46,9 +53,9 @@
 				
 			</div>
 			<p>当前支持2~10进制位之间的互换</p>
-			<div class="row" >
+			<div class="row" style="margin-bottom: 30px;">
 				
-					<div class="col-sm-8 px-5">		
+					<div class="col-sm-8">		
 						<label title="输入要转换的原进制数字">原数字</label>&emsp;<textarea class="form-control orginalInput" id="Input" rows="3" placeholder="请输入原数字..."></textarea>										
 					</div>
 					
@@ -61,15 +68,13 @@
 						<textarea class="form-control Numberation" id="ObjectNumberation" maxlength="2"></textarea>
 					</div>
 			</div>	
-			<br><br />
 			<div class="row">
-				<div class="col-sm-8 px-5">
+				<div class="col-sm-8" style="margin-bottom: 30px;">
 					<label>输出结果</label><textarea class="form-control orginalInput" placeholder="输出结果" id="Output"></textarea>
 				</div>
 			</div>
-			<br /><br />
 			<div class="row">
-				<div class="col-sm-4 px-5">
+				<div class="col-sm-4">
 					<button type="button" class="btn btn-primary" style="margin-left: 10px;" id="start">转换</button>
 					<button type="button" class="btn btn-primary" style="margin-left: 10px;">复制</button>
 					<button type="button" class="btn btn-primary" style="margin-left: 10px;" id="reset">重置</button>
