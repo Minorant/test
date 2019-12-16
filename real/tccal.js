@@ -80,7 +80,7 @@ function ttt(){
 		else if(sex==2&&grade==2){
 			i=4;
 		}
-		var idArr = new Array("#Lung","#Fifty","#Flexibility","#Jump","#Long","#Exa");// 所对应的id
+		    idArr = new Array("#Lung","#Fifty","#Flexibility","#Jump","#Long","#Exa","#tall","#weigh");// 所对应的id
 		var Level = new Array("优秀","良好","及格","不及格");
 		var weightArr = new Array(0.15,0.2,0.1,0.1,0.2,0.1,0.15);// 加权百分数
 		var weightScore = new Array; // weightScore当前记录了0~5的加权后总分*
@@ -118,6 +118,10 @@ function ttt(){
 			Score[6] = 80;
 			LevelScore[6] = "低体重";
 		}
+		else if($("#tall").val()==""||$("#weigh").val()==""){
+			Score[6] = 0;
+			LevelScore[6] = "错误";
+		}
 		else{
 			Score[6] = 100;
 			LevelScore[6] = "正常";
@@ -142,7 +146,7 @@ function ttt(){
 			$("#addS").text(addScore[4]+addScore[5]);
 			return Math.round(to*100)/100;
 		})
-		$(".result").css("visibility","visible");
+		$(".result").css("display","block");
 		
 	});
 }
@@ -171,8 +175,11 @@ function Search(score,arrIndex,type){
 }
 function resetClick(){
 	$("#btn-reset").click(function(){
-		var b = $("#F-Jump").next();
-		b = b.next()
+		for(var i = 0;i<= 7;i++){
+			$(idArr[i]).val("");
+			
+		}
+		$(".result").css("display","none");
 	});
 		
 }
