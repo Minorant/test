@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap 实例</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+		<script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="style.css"/>
+		<script type="text/javascript" src="tccal.js"></script>
+	</head>
+	<body>
+		<div class="jumbotron jumbotron-fluid text-left text-light headBackground" style="margin-bottom:0">
+			<div class="headImg text-center">
+				<img src="head.jpg" />
+				<h1 style="margin-top: 20px;">SOS団長</h1>
+			</div>
+			
+		</div>
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark" style="margin-bottom: 20px;">
+			<a class="navbar-brand" href="test5.html">主页</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="collapsibleNavbar">
+				<ul class="navbar-nav navSetting">
+					 <li class="nav-item dropdown">
+					      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+					        数学工具
+					      </a>
+					      <div class="dropdown-menu">
+					        <a class="dropdown-item" href="test6.html">进制转换</a>
+					      </div>
+					</li>
+					<li class="nav-item dropdown">
+					      <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+					        校园工具
+					      </a>
+					      <div class="dropdown-menu">
+					        <a class="dropdown-item" href="#">体测计算器</a>
+					      </div>
+					</li>
+				</ul>
+				<div class="navSearch ml-auto">
+					<form class="form-inline">
+						<input class="form-control" type="text" placeholder="你想搜一点什么？虽然什么都没有orz">
+						<button class="btn btn-success" type="submit"><i class="fa fa-search" style="font-size:20px;"></i><strong>搜索</strong></button>
+					</form>
+				</div>
+			</div>
+		</nav>
+		<div class="container">
+			<h1 style="margin-bottom: 30px;">体测计算器</h1>
+			<div class="row">
+				<div class="col-md-6">
+					<table class="table table-hover" style="max-width: 500px;">
+						<tbody>
+							<tr>
+								<td>性别</td>
+								<td >
+									<div class="btn-group">
+										<button type="button" class="btn btn-secondary" id="man"><i class="fa fa-mars"></i>男</button>
+										<button type="button" class="btn btn-secondary" id="woman"><i class="fa fa-venus"></i>女</button>
+									</div>
+								</td>
+									
+								
+							</tr>
+						<tr>
+							<td>年级</td>
+							<td>
+								<div class="btn-group">
+									<button type="button" class="btn btn-secondary" id="u1">大一</button>
+									<button type="button" class="btn btn-secondary" id="u2">大二</button>
+									<button type="button" class="btn btn-secondary" id="u3">大三</button>
+									<button type="button" class="btn btn-secondary" id="u4">大四</button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>身高</td>
+							<td>
+								<textarea class="orginalInput tcInput" rows="1" maxlength="3" id="tall"></textarea>
+								<i>厘米</i>
+							</td>
+						</tr>
+						<tr>
+							<td>体重</td>
+							<td>
+								<textarea class="orginalInput tcInput" rows="1" maxlength="3" id="weigh"></textarea>
+								<i>千克</i>
+							</td>
+						</tr>
+						<tr>
+							<td>肺活量</td>
+							<td>
+								<textarea class="orginalInput tcInput" rows="1" maxlength="5" id="Lung"></textarea>
+								<i>毫升</i>
+							</td>
+						</tr>
+						<tr>
+							<td>50米</td>
+							<td>
+								<textarea class="orginalInput tcInput" rows="1" maxlength="5" id="Fifty"></textarea>
+								<i>秒</i>
+							</td>
+						</tr>
+						<tr>
+							<td>坐位体前屈</td>
+							<td>
+								<textarea class="orginalInput tcInput" rows="1" maxlength="7" id="Flexibility"></textarea>
+								<i>厘米</i>
+							</td>
+						</tr>
+						<tr>
+							<td>立定跳远</td>
+							<td>
+								<textarea class="orginalInput tcInput" rows="1" maxlength="3" id="Jump"></textarea>
+								<i>厘米</i>
+							</td>
+						</tr>
+						
+						<tr>
+							<td id="td-long">1000米</td>
+							<td>
+								<textarea class="orginalInput tcInput" rows="1" maxlength="5" id="Long"></textarea>
+								<i>秒</i>
+							</td>
+						</tr>
+						<tr>
+							<td id="td-exa">引体向上</td>
+							<td>
+								<textarea class="orginalInput tcInput" rows="1" maxlength="3" id="Exa"></textarea>
+								<i>次</i>
+							</td>
+						</tr>
+						</tbody>																					
+					</table>
+					
+				</div>
+				<div class="col-md-6 result">
+					<table class="table table-hover">
+						<h3>成绩报告</h3>
+						<tr>
+							<th>项目</th>
+							<th>原始成绩</th>
+							<th>得分</th>
+							<th>加权分</th>
+							<th>附加分</th>
+							<th>评级</th>
+						</tr>
+						<tr>
+							<td id="F-BMI">BMI</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td id="F-Lung">肺活量</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td id="F-Fifty">50米</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td id="F-Flexibility">坐位体前屈</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td id="F-Jump">立定跳远</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td id="F-Long">1000米</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td id="F-Exa">引体向上</td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+						
+					</table>
+							<h4 class="text-center">总分:<span id="toltalScore"></span>分(<span id="toltalLevel"></span>)+<span id="addS"></span></h4>				
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-sm-4 text-center">
+				<button type="button" class="btn btn-primary btn-run" id="btn-summit">提交</button>
+				<button type="button" class="btn btn-danger btn-run" id="btn-reset">重置</button>
+				</div>	
+			</div>
+		</div>
+
+		<footer class="footer bg-light" style="margin-bottom: 0;">
+			<hr>
+			<div class="text-center">
+				<a href="https://github.com/Minorant/test" target="_blank">
+					<i class="fa fa-github" style="font-size:20px;"></i>
+				</a>
+				<p class="text-center" style="margin: 0;">Copyright © 2019 Minorant shangjinsb.top All Rights Reserved. </p>
+				<br>
+			</div>
+		</footer>
+	
+	</body>
+</html>

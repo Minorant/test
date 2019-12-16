@@ -1,0 +1,54 @@
+.jumbotron{
+	background-color: #0288d1;
+}
+.navSearch>form>input{
+	width: 300px!important;
+}
+.navSearch>form>button{
+	margin-left: 5px;
+}
+.erwm{
+	 width: 100px;
+	 height: 100px;
+}
+.nav-item{
+	padding-right: 20px;
+}
+.fa-github{
+	color: #56B6C2;
+}
+.orginalInput{
+	resize: none;
+}
+.Numberation{
+	resize: none;
+	width: 50px;
+	height: 40px!important;
+}
+.headBackground{
+	background: url(background.png);
+}
+.headImg img{
+		width: 150px;
+		height: 150px;
+		border-radius: 50%;
+		border:5px solid;
+		-moz-transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+}
+.headImg img:hover{
+	-moz-transform: scale(1.3);
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+	cursor: pointer;
+}
+.tcInput{
+	width: 100px;
+}
+.btn-run{
+	margin: 10px;
+}
+.result{
+	visibility: hidden;
+}
